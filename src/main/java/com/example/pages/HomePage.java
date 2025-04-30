@@ -1,19 +1,15 @@
 package com.example.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class HomePage extends BasePage {
 
-    // Use @FindBy annotations instead of By locators
+    // Locators 
     @FindBy(id = "nav-signin-text")
     private WebElement signInLink;
 
@@ -35,14 +31,12 @@ public class HomePage extends BasePage {
     // Method to click the "Sign In" link
     public void clickSignIn() {
         waitForPreloaderToDisappear();
-        // Wait until the "Sign In" link is clickable and then click it
         signInLink.click();
     }
 
     // Method to enter search query in the search field
     public void enterSearchQuery(String query) {
         waitForPreloaderToDisappear();
-        // Wait until the search field is visible and enter the query
         searchField.clear();
         searchField.sendKeys(query);
     }
@@ -50,10 +44,14 @@ public class HomePage extends BasePage {
     // Method to click the search button
     public void clickSearchButton() {
         waitForPreloaderToDisappear();
-        // Wait until the search button is clickable and then click it
         searchButton.click();
     }
 
+    /*  
+    Method to check if a search query matches any item in the search results, 
+    clicks on the first matching item, and returns true if a match is found; 
+    otherwise, it returns false.
+    */
     public boolean verifySearchResult(String query) {
         waitForPreloaderToDisappear();
 
@@ -61,14 +59,10 @@ public class HomePage extends BasePage {
         for (WebElement item : searchResults) {
             if (item.getText().toLowerCase().contains(query.toLowerCase())) {
                 item.click();  // Click the first result that matches
-                return true;  // Return true when a match is found
+                return true;
             }
         }
-
-        return false;  // Return false if no results match
+        return false;
     }
 
-    public void waitForSearchResultsToLoad() {
-        waitForPreloaderToDisappear();
-    }
 }
