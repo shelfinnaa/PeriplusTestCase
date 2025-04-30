@@ -10,7 +10,6 @@
           <include name="testSearchBook"/>
           <include name="testAddBookToCart"/>
           <include name="testValidLogin"/>
-          <include name="testVerifyItemCart"/>
         </methods>
       </class> <!-- com.example.Tests.TestCases -->
     </classes>
