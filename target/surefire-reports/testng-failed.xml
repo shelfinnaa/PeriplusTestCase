@@ -7,8 +7,8 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUpClass"/>
-          <include name="testAddBookToCart"/>
           <include name="testSearchBook"/>
+          <include name="testAddBookToCart"/>
           <include name="testValidLogin"/>
           <include name="testVerifyItemCart"/>
         </methods>

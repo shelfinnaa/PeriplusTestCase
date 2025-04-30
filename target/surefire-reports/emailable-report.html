@@ -9,13 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">31,469</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">33,928</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.example.Tests.TestCases</td><td><a href="#m0">testAddBookToCart</a></td><td rowspan="1">1745916907528</td><td rowspan="1">3649</td></tr><tr class="passedeven"><td><a href="#m1">testSearchBook</a></td><td rowspan="1">1745916898305</td><td rowspan="1">9220</td></tr><tr class="passedeven"><td><a href="#m2">testValidLogin</a></td><td rowspan="1">1745916898284</td><td rowspan="1">19</td></tr><tr class="passedeven"><td><a href="#m3">testVerifyItemCart</a></td><td rowspan="1">1745916911178</td><td rowspan="1">10464</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.example.Tests.TestCases</td><td><a href="#m0">testAddBookToCart</a></td><td rowspan="1">1745940026846</td><td rowspan="1">10567</td></tr><tr><th colspan="4">Surefire test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.example.Tests.TestCases</td><td><a href="#m1">testVerifyItemCart</a></td><td rowspan="1">1745940037419</td><td rowspan="1">0</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.example.Tests.TestCases</td><td><a href="#m2">testSearchBook</a></td><td rowspan="1">1745940014002</td><td rowspan="1">12839</td></tr><tr class="passedeven"><td><a href="#m3">testValidLogin</a></td><td rowspan="1">1745940013976</td><td rowspan="1">22</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.example.Tests.TestCases#testAddBookToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.example.Tests.TestCases#testSearchBook</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.example.Tests.TestCases#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.example.Tests.TestCases#testVerifyItemCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Surefire test</h2><h3 id="m0">com.example.Tests.TestCases#testAddBookToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .modal-text (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /var/folders/m_/3v4564m52jj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63384/devtoo..., se:cdpVersion: 135.0.7049.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46d42dedd2b46ac717d11ba139c5b110
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.example.Tests.TestCases.testAddBookToCart(TestCases.java:124)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.example.Tests.TestCases#testVerifyItemCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method com.example.Tests.TestCases.testVerifyItemCart() on instance com.example.Tests.TestCases@1b68b9a4 depends on not successfully finished methods 
+[com.example.Tests.TestCases.testAddBookToCart() on instance com.example.Tests.TestCases@1b68b9a4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.example.Tests.TestCases#testSearchBook</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.example.Tests.TestCases#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
